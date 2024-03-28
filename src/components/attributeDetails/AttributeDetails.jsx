@@ -20,6 +20,7 @@ import SocialSignal from "./socialSignal/SocialSignal";
 import SocialFootprint from "./socialFootprint/SocialFootprint";
 import EmailSocial from "./emailSocial/EmailSocial";
 import PhoneSocial from "./phoneSocial/PhoneSocial";
+import AccordionComponent from "./accordionCompnent/AccordionComponent";
 export default function AttributeDetails() {
   return (
     <Box shadow={"lg"}>
@@ -32,7 +33,7 @@ export default function AttributeDetails() {
         gap={4}
       >
         {/* Your content here */}
-        <Accordion defaultIndex={[0]} allowMultiple>
+        {/* <Accordion defaultIndex={[0]} allowMultiple>
           <AccordionItem>
             <h2>
               <AccordionButton>
@@ -167,25 +168,27 @@ export default function AttributeDetails() {
               <SocialSignal />
             </AccordionPanel>
           </AccordionItem>
+        </Accordion> */}
+        <Accordion defaultIndex={[0]} allowMultiple>
+          <AccordionComponent />
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box as="span" flex="1" textAlign="left">
+                  Section 2 title
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </AccordionPanel>
+          </AccordionItem>
         </Accordion>
       </Flex>
     </Box>
   );
-}
-
-{
-  /* <PhoneName />
-<Divider orientation="horizontal" borderColor="gray.200" />
-<EmailName />
-<Divider orientation="horizontal" borderColor="gray.200" />
-<PhoneNetwork />
-<Divider orientation="horizontal" borderColor="gray.200" />
-<PhonetoName />
-<Divider orientation="horizontal" borderColor="gray.200" />
-<PhoneSocial />
-<SocialFootprint />
-<SocialSignal />
-<EmailSocial />
-<SocialFootprint />
-<SocialSignal /> */
 }

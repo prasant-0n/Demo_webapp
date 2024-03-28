@@ -1,36 +1,24 @@
-import React from "react";
-import { Box, Flex, Text, Stack, Divider } from "@chakra-ui/react";
-import SelectInput from "../../inputComponent/SelectInput";
-import { selectData } from "../../Utils";
+import React, { useState } from "react";
+import {
+  Box,
+  Flex,
+  Text,
+  Stack,
+  Divider,
+  AccordionItem,
+  AccordionButton,
+  AccordionIcon,
+  AccordionPanel,
+} from "@chakra-ui/react";
+import AccordionComponent from "../accordionCompnent/AccordionComponent";
+
 export default function PhoneName() {
-  return (
-    <Flex flexDirection={"column"} gap={6}>
-      <Flex flexDirection={"row"} gap={60}>
-        <Box>
-          <Text fontSize={"12px"} color={"gray.400"}>
-            Address
-          </Text>
-          <Text fontSize={"12px"}>-----</Text>
-        </Box>
-        <Box>
-          <Text fontSize={"12px"} color={"gray.400"}>
-            Business Name Detected
-          </Text>
-          <Text fontSize={"12px"}>-----</Text>
-        </Box>
-        <Box>
-          <Text fontSize={"12px"} color={"gray.400"}>
-            Conditions Evaluations Status
-          </Text>
-          <Text fontSize={"12px"}>-----</Text>
-        </Box>
-        <Box>
-          <Text fontSize={"12px"} color={"gray.400"}>
-            Digital Age
-          </Text>
-          <Text fontSize={"12px"}>-----</Text>
-        </Box>
-      </Flex>
-    </Flex>
-  );
+  const [visible, setVisible] = useState(false); // State to manage visibility
+
+  // Function to toggle visibility when accordion button is clicked
+  const handleAccordionClick = () => {
+    setVisible(!visible);
+  };
+
+  return <Box></Box>;
 }
